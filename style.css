@@ -1,0 +1,156 @@
+/* Основні налаштування */
+:root {
+    --primary-color: #e50914; /* Червоний як у Netflix */
+    --bg-dark: #141414;
+    --text-light: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    scroll-behavior: smooth;
+}
+
+
+/* Навігація (Практична №3) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 90%;
+    z-index: 1000;
+}
+
+/* Адаптивна сітка для відео (Практична №7) */
+.video-grid {
+    display: flex; /* */
+    justify-content: space-around; /* Розподіляє простір навколо елементів */
+    align-items: center; /* Центрування по вертикалі */
+    width: 100%; /* Контейнер має займати всю ширину секції */
+    max-width: 1400px; /* Обмежуємо максимальну ширину для великих екранів */
+    margin: 0 auto;
+    /* gap краще прибрати або зменшити, щоб дати простір для space-around */
+    gap: 20px; 
+}
+
+.video-container {
+    /* flex-grow: 0 не дасть відео розтягуватися на всю ширину, 
+       що дозволить побачити ефект space-around */
+    flex: 0 1 560px; 
+    width: 100%;
+    max-width: 560px;
+}
+
+.video-container iframe {
+    width: 100%; /* Адаптація під розмір контейнера */
+    aspect-ratio: 16 / 9; /* Автоматичне підтримання пропорцій відео */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.menu {
+    list-style: none; /* Прибрати маркери */
+    display: flex; /* Горизонтально */
+    margin: 0;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: 0.3s; /* Плавність */
+}
+
+.menu li a:hover {
+    color: var(--primary-color); /* Зміна кольору при наведенні */
+}
+
+/* Герой-секція */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1200x600');
+    background-size: cover;
+}
+
+#catalog{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#trailers{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #343030;
+}
+#trailers h3{
+    margin-top: -130px;
+    padding-bottom: 90px;
+}
+/* Гнучка сітка карток (Практична №7) */
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap; /* Перенос на новий рядок */
+    gap: 20px;
+    padding: 40px 5%;
+    justify-content: center;
+}
+
+.movie-card {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.05); /* Ефект збільшення */
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Форма */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
