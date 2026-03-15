@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Головна</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-<header>
-    <h1>MovieCatalog</h1>
+<header style="display: flex; justify-content: center; align-items: center; padding: 20px;">
+    <h1 style="margin: 0;">MovieCatalog</h1>
 </header>
 
 <nav>
@@ -19,35 +21,39 @@
 </nav>
 
 <div >
-    <section >
+    <section style="display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;">
         <h2>Ласкаво просимо до світу кіно!</h2>
         <p>Найкраща вітрина з популярними новинками та класикою кінематографа.</p>
-        <button onclick="location.href='catalog.html'">Переглянути каталог</button>
+        <button style="color: aliceblue; background-color: #333; padding: 20px; border-radius: 6px; border-style: hidden; " onclick="location.href='catalog.html'">Переглянути каталог</button>
     </section>
 
     <h3>Популярне зараз</h3>
-    <div >
-        <div>
+    <div style="display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;">
+        <div class="movie-card">
             <img src="inter.jpg" alt="Фільм 1">
             <h4><a href="movie-details.html">Інтерстеллар</a></h4>
-            <p>Жанр: Наукова фантастика</p>
+            <p class="accent-text">Жанр: Наукова фантастика</p>
         </div>
-        <div>
+        <div class="movie-card">
             <img src="dyuna.jpg" alt="Фільм 2" width="244">
             <h4><a href="movie-details.html">Дюна</a></h4>
-            <p>Жанр: Екшн, Драма</p>
+            <p class="accent-text">Жанр: Екшн, Драма</p>
         </div>
-        <div>
+        <div class="movie-card">
             <img src="pochatok.jpg" alt="Фільм 3">
             <h4><a href="movie-details.html">Початок</a></h4>
-            <p>Жанр: Трилер</p>
+            <p class="accent-text">Жанр: Трилер</p>
         </div>
     </div>
 </div>
-
-<footer>
-    <p>&copy; 2026 ВНТУ | Виконав ст. Кузя Н.І.</p>
-</footer>
 
 </body>
 </html>

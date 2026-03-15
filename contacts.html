@@ -5,10 +5,45 @@
     <title>Контакти</title>
     <style>
         form { 
-            display: flex; 
-            flex-direction: column; 
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        form label {
+            margin-top: 10px;
+        }
+
+        form input{
+            margin-top: 5px;
+            padding: 8px;
+            width: 300px;
+        }
+
+        form textarea {
+            margin-top: 5px;
+            padding: 8px;
+            width: 300px;
+        }
+
+        form button{
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #555;
         }
     </style>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <nav><a href="index.html">Назад на головну</a></nav>

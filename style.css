@@ -1,0 +1,233 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* каталог */
+
+.table-style {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-style thead {
+    background-color: #333;
+    color: #ffffff;
+    text-align: left;
+}
+
+.table-style th,
+.table-style td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-style tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.table-style tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: 0.3s;
+}
+
+.table-style tbody tr:last-of-type {
+    border-bottom: 2px solid #333;
+}
+
+.btn-view {
+    text-decoration: none;
+    background-color: #333;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-view:hover {
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* шапка */
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+nav a:active {
+    color: #fff;
+    background-color: #333;
+}
+
+/* картка фільму */
+
+.movie-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 400px;
+    border-radius: 5px;
+}
+
+.movie-card a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.accent-text {
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+ol,
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* деталі фільму */
+
+.movie-header {
+    display: flex;
+    gap: 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.movie-header img {
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.movie-header h1 {
+    margin-top: 0;
+    font-size: 2.2em;
+    color: #000000;
+}
+
+.genre-tag {
+    background: #e1e8ed;
+    color: #34495e;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+mark {
+    background-color: #f1c40f;
+    color: #000;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.description {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    line-height: 1.6;
+    border-left: 5px solid #000000;
+    margin-bottom: 30px;
+}
+
+iframe {
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* трейлери */
+
+.video-gallery {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.video-item {
+    background: #2b2b2b;
+    color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.video-item h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-description {
+    font-size: 1.1em;
+    color: #ccc;
+    border-top: 1px solid #ffffff;
+    padding-top: 15px;
+    margin-top: 10px;
+}
