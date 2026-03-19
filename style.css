@@ -231,3 +231,16 @@ iframe {
     padding-top: 15px;
     margin-top: 10px;
 }
+
+.btn1{
+    color: aliceblue;
+        background-color: #333;
+        padding: 20px;
+        border-radius: 6px;
+        border-style: hidden;
+}
+
+.btn1:hover{
+    cursor:pointer;
+    background-color: #000;
+}
