@@ -1,57 +1,75 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
-    <title>Головна</title>
+    <title>Головна — MovieCatalog</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
+
 <body>
 
-<header style="display: flex; justify-content: center; align-items: center; padding: 20px;">
-    <h1 style="margin: 0;">MovieCatalog</h1>
-</header>
-<nav>
-    <a href="index.html">Головна</a>
-    <a href="catalog.html">Каталог</a>
-    <a href="trailers.html">Трейлери</a>
-    <a href="about.html">Про нас</a>
-    <a href="contacts.html">Контакти</a>
-</nav>
+    <header class="parallax-container">
+        <div class="parallax-layer-bg" id="bg-layer"></div>
 
-<div class="main">
-    <div class="">
-    <section style="display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;">
-        <h2>Ласкаво просимо до світу кіно!</h2>
-        <p>Найкраща вітрина з популярними новинками та класикою кінематографа.</p>
-        <button class="btn1" onclick="location.href='catalog.html'">Переглянути каталог</button>
-    </section>
+        <div class="parallax-layer-text" id="text-layer">
+            <h1 style="font-size: 4em; margin: 0; color: white;">MovieCatalog</h1>
+            <h2>Ласкаво просимо до світу кіно!</h2>
+            <p>Найкраща вітрина з популярними новинками та класикою кінематографа.</p>
+            <button class="btn1" onclick="location.href='catalog.html'" style="margin-top: 20px;">Переглянути
+                каталог</button>
+        </div>
+    </header>
 
-    <h3>Популярне зараз</h3>
-</div>
-    <div class="movie-container">
-        <div class="movie-card">
-            <img src="inter.jpg" alt="Фільм 1">
-            <h4><a href="movie-details.html">Інтерстеллар</a></h4>
-            <p class="accent-text">Жанр: Наукова фантастика</p>
-        </div>
-        <div class="movie-card">
-            <img src="dyuna.jpg" alt="Фільм 2" width="244">
-            <h4><a href="movie-details.html">Дюна</a></h4>
-            <p class="accent-text">Жанр: Екшн, Драма</p>
-        </div>
-        <div class="movie-card">
-            <img src="pochatok.jpg" alt="Фільм 3">
-            <h4><a href="movie-details.html">Початок</a></h4>
-            <p class="accent-text">Жанр: Трилер</p>
+    <nav class="sticky-nav">
+        <a href="index.html">Головна</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="trailers.html">Трейлери</a>
+        <a href="about.html">Про нас</a>
+        <a href="contacts.html">Контакти</a>
+    </nav>
+
+    <div class="main">
+        <h3 style="text-align: center; font-size: 2em; margin: 40px 0;">Популярне зараз</h3>
+
+        <div class="movie-container">
+            <div class="movie-card">
+                <img src="inter.jpg" alt="Фільм 1">
+                <h4><a href="movie-details.html">Інтерстеллар</a></h4>
+                <p class="accent-text">Жанр: Наукова фантастика</p>
+            </div>
+            <div class="movie-card">
+                <img src="dyuna.jpg" alt="Фільм 2" width="244">
+                <h4><a href="movie-details.html">Дюна</a></h4>
+                <p class="accent-text">Жанр: Екшн, Драма</p>
+            </div>
+            <div class="movie-card">
+                <img src="pochatok.jpg" alt="Фільм 3">
+                <h4><a href="movie-details.html">Початок</a></h4>
+                <p class="accent-text">Жанр: Трилер</p>
+            </div>
         </div>
     </div>
-</div>
 
+    <section class="parallax-fixed">
+        <div class="parallax-fixed-content">
+            <h2>Кіно, яке змінює свідомість</h2>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('scroll', function () {
+            let scrollPosition = window.scrollY;
+
+            let bgLayer = document.getElementById('bg-layer');
+            let textLayer = document.getElementById('text-layer');
+
+            bgLayer.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
+
+            textLayer.style.transform = 'translateY(' + scrollPosition * 0.2 + 'px)';
+            textLayer.style.opacity = 1 - (scrollPosition / 500);
+        });
+    </script>
 </body>
+
 </html>
