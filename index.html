@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Головна — MovieCatalog</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -35,19 +36,17 @@
         <div class="movie-container">
             <div class="movie-card">
                 <img src="inter.jpg" srcset="inter.jpg 1000w, inter.jpg 500w" sizes="(max-width: 768px) 100vw, 300px"
-                    alt="Постер Інтерстеллар">
+                    loading="lazy" alt="Фільм Інтерстеллар">
                 <h4><a href="movie-details.html">Інтерстеллар</a></h4>
                 <p class="accent-text">Жанр: Наукова фантастика</p>
             </div>
             <div class="movie-card">
-                <img src="dyuna.jpg" srcset="dyuna.jpg 1000w, dyuna.jpg 500w" sizes="(max-width: 768px) 100vw, 300px"
-                    alt="Постер Дюна">
+                <img src="dyuna.jpg" loading="lazy" alt="Фільм Дюна" width="244">
                 <h4><a href="movie-details.html">Дюна</a></h4>
                 <p class="accent-text">Жанр: Екшн, Драма</p>
             </div>
             <div class="movie-card">
-                <img src="pochatok.jpg" srcset="pochatok.jpg 1000w, pochatok.jpg 500w" sizes="(max-width: 768px) 100vw, 300px"
-                    alt="Постер Початок">
+                <img src="pochatok.jpg" loading="lazy" alt="Фільм Початок">
                 <h4><a href="movie-details.html">Початок</a></h4>
                 <p class="accent-text">Жанр: Трилер</p>
             </div>
@@ -68,7 +67,6 @@
             let textLayer = document.getElementById('text-layer');
 
             bgLayer.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
-
             textLayer.style.transform = 'translateY(' + scrollPosition * 0.2 + 'px)';
             textLayer.style.opacity = 1 - (scrollPosition / 500);
         });
