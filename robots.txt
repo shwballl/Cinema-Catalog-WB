@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /script.js
+Allow: /
+Sitemap: https://www.moviecatalog.ua/sitemap.xml
