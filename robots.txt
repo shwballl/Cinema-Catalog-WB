@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /script.js
 Allow: /
-Sitemap: https://www.moviecatalog.ua/sitemap.xml
+Sitemap: https://shwballl.github.io/Cinema-Catalog-WB/sitemap.xml
