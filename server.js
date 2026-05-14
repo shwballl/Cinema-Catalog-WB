@@ -6,9 +6,15 @@ const cors = require("cors");
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+const cors = require("cors");
 
-// Додаємо maxAge: '1d' для кешування статичних файлів на 1 день
+const corsOptions = {
+  origin: "https://shwballl.github.io",
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
+
 app.use(
   express.static(path.join(__dirname, "public"), {
     maxAge: "1d",
